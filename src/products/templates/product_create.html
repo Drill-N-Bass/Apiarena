@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- bez dodania {% csrf_token %} nie da się zapisać fromularza -->
+<form action="." method="POST"> {% csrf_token %}
+{{ form.as_p}}
+<input type="submit" value="Save" />
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+{% comment %}
+
+To poniżej do wykożystania dla:
+
+# class Product(models.Model):
+# 	email            = models.CharField(null=False, blank=False, max_length=120) # max_lenght required
+# 	customer_skype   = models.CharField(null=False, blank=False, max_length=120)
+
+
+{% block content %}
+<!-- bez dodania {% csrf_token %} nie da się zapisać fromularza -->
+<form method="POST"> {% csrf_token %}
+{{ form.as_p}}
+<input type="submit" value="Save" />
+</form>
+
+{% endblock %}
+
+
+{% endcomment %}

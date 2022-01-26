@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Apiarena contact details are here</h1>
+	<p>this is a template</p>
+	{# `add` is Built-in filter reference (built in template tag): https://docs.djangoproject.com/en/4.0/ref/templates/builtins/ #}
+
+<p>
+	{{test_apiarena|safe}}
+
+
+<p>
+{{my_text|title}}
+</p>
+
+<p>
+	{{my_number}}, {{my_list}}
+</p>
+
+<ul>
+	<li>item_1</li>
+	<li>item_2</li>
+</ul>
+
+<ul>
+{% for sub_item in my_list %}
+	{% if sub_item == 7777 %}
+		<li>{{forloop.counter}} => {{7777|add:1000}}</li> 
+		{# `add` is Built-in filter reference (built in template tag): https://docs.djangoproject.com/en/4.0/ref/templates/builtins/ #}
+	
+	{% elif sub_item == 7779 %}
+		<li>{{forloop.counter}} ===> {{7779|add:1}} It's an error !!!</li>
+	{% else %}
+	<li>{{forloop.counter}} => {{sub_item}}</li>
+	{% endif %}
+	
+{% endfor %}
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	{# tittle tag that will be shown in tab#}
+	<title> Api Arena </title>
+</head>
+<body>
+	{% include "navbar.html" %}{# with this, we can manipulate navbar in each site with just navbar.html#}
+
+
+	{% block content %}
+	{% comment %}
+	without `{% block content %}` and `{% endblock %}`
+	in other templates, it will print: "replace me"
+	{% endcomment %}
+	replace me
+	{% endblock %}
+	</body>
+	
+</html>
+
+
+
+
+{# image part doesnt work at this point #}
+	{% comment %}
+	 <p>
+		{% load static %} <img src="{% static 'logos/media/Apiarena.jpeg' %}" alt="image of the logo" />
+	</p>
+	{% endcomment %}
