@@ -22,6 +22,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns # for pictur
 
 from products.views import product_detail_view, product_create_view
 
+    # 'django.contrib.staticfiles.storage.StaticFilesStorage', # to nie działa a jest prawdopodobnie potrzebne do js by dziłało toggle scroll
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),

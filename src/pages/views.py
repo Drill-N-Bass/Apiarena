@@ -21,7 +21,12 @@ def contact(request, *args, **kwargs):
 								<div class="about-us-txt">
 									<h2>About us</h2>
 									<p>
-										We are innovative international distributor with years of experience in the video games industry. We have connections to dozens of reliable suppliers, ensuring timely delivery at a competitive price. We welcome new business partners to start a cooperation with us.
+										We are innovative international distributor with years
+										of experience in the video games industry.
+										We have connections to dozens of reliable suppliers,
+										ensuring timely delivery at a competitive price.
+										We welcome new business partners to start a cooperation
+										with us.
 									</p>
 
 								</div><!--/.about-us-txt-->
