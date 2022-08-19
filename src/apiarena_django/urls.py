@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from pages.views import home_view, contact
+from hangman_game.views import easter_egg_hangman_game
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns # for pictures
 
@@ -31,6 +32,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('product/', product_detail_view), # , name='product'
     path('create/', product_create_view),
+    path('', include('hangman_game.urls')),
 ]
 
 # at this point it doesn't work:

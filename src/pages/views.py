@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -35,17 +35,3 @@ def contact(request, *args, **kwargs):
 
 	return render(request, "contact.html", my_context)
  	
-
-
-	################
-	#Pytanie na stack overflow:
-
-	# how can I migrate CSS webpage into Django?
-
-# I'm developing my Django skills and getting to a point when I need to convert a CSS webpage to be able to load it with Django. I need some guidance on what's needed step by step to do so. I don't have CSS experience. 
-
-# I know that I can use `wget`:
-
-# ```wget --page-requisites http://example.com/your/page.html```
-
-# to download whole page. Or, I can use [HTTrack](http://www.httrack.com/) 
