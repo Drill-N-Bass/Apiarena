@@ -19,6 +19,7 @@
 15. New-project
 16.	Footer
 17.	Footer Copyright
+18. Added by Pawel
 
 ===========*/
 /*-------------------------------------
@@ -739,12 +740,12 @@ a:focus.service-btn{
     text-transform: capitalize;
     margin-top:12px;
     margin-bottom: 15px;
-}/*.service-txt*/
+/* }.service-txt
 
 .service-single:hover{
 	/*box-shadow:0 5px 20px rgba(112,134,230,.2);
 	opacity: 1;*/
-}
+} */
 
 /*-------------------------------------
 		7. Statistics
@@ -795,9 +796,9 @@ a:focus.service-btn{
 .project{
 	padding: 117px 0 109px;
 }
-.project-details{
+/* .project-details{
 
-}
+} */
 .project-content {
     margin-top:62px;
 }
@@ -1789,11 +1790,11 @@ margin-bottom:50px;
 	-o-transition:all 0.2s linear;
     transition: all 0.2s linear;
 }
-.foot-menu   li a,
+/* .foot-menu   li a,
 .foot-menu   li a:hover,
 .foot-menu   li a:focus{
 
-}
+} */
 .foot-menu  li {
 	position:relative;
 	padding-left:42px;

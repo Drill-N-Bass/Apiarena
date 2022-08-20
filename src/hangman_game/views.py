@@ -6,3 +6,4 @@ def easter_egg_hangman_game(request, *args, **kwargs):
 	print("User's name that is log in now is: ", request.user) # checking username that is log in (in console)
 	# return HttpResponse("<h1>Hello World</h1>") # string of HTML code
 	return render(request, "hangman.html")
+

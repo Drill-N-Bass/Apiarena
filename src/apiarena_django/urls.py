@@ -19,7 +19,8 @@ from django.urls import path, include
 from pages.views import home_view, contact
 from hangman_game.views import easter_egg_hangman_game
 
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns # for pictures
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from pawel_pedryc_developer.views import home_view_pawel # for pictures
 
 from products.views import product_detail_view, product_create_view
 
@@ -33,6 +34,7 @@ urlpatterns = [
     path('product/', product_detail_view), # , name='product'
     path('create/', product_create_view),
     path('', include('hangman_game.urls')),
+    path('', include('pawel_pedryc_developer.urls')),
 ]
 
 # at this point it doesn't work:
