@@ -1,26 +1,13 @@
 from django.shortcuts import render
 # from django.http import HttpResponse
+
+from .models import EssayCls
+
 # Create your views here.
 
 
 def home_view_pawel(request):
-    essay = [
-        {
-            'title':       'Learning Python is a long run, not a sprint',
-            'description': 'Intro do eseju',
-            'slug':        'Learning-Python-is-a-long-run-not-a-sprint',
-            'pict':        'C:/Users/b2b/Desktop/pikachu z png na jpeg.jpg',
-            'location':    'Powidz'
-        },
-        {
-            'title':       'Jakiś drugi artykuł, zapchaj dziura - może dodatkowa część tego mojego pierwszego',
-            'description': 'treść artykułu',
-            'slug':        'The-second-essay',
-            'pict':        'C:/Users/b2b/Desktop/pikachu z png na jpeg.jpg',
-            'location':    'Wrocław'
-        }
-    ]
-
+    essay = EssayCls.objects.all()
 
     # return HttpResponse('Test')
     return render(

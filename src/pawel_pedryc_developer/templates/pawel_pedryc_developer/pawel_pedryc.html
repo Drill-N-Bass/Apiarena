@@ -21,8 +21,16 @@ tu może dam jakiś cytat
                 <ol>
                     {% if show_text_content %}
                         {% for essay_item in text_content %}
-
-                            {% include 'pawel_pedryc_developer/includes/essay-items.html' %}
+                        
+                            {% comment %} settings.py line 143-147 allows to break the code as below
+                            More info about this:
+                            # django template tag on multiple line (Zach Snow answer):
+                            # https://stackoverflow.com/questions/49110044/django-template-tag-on-multiple-line
+                            {% endcomment %}
+                            {% include 'pawel_pedryc_developer/includes/essay-items.html'
+                            with
+                            title=essay_item.title
+                            description=essay_item.description %}
 
                         {% endfor %}
                     {% else %}
