@@ -21,7 +21,7 @@ tu może dam jakiś cytat
                 <ol>
                     {% if show_text_content %}
                         {% for essay_item in text_content %}
-                        
+
                             {% comment %} settings.py line 143-147 allows to break the code as below
                             More info about this:
                             # django template tag on multiple line (Zach Snow answer):
@@ -30,7 +30,9 @@ tu może dam jakiś cytat
                             {% include 'pawel_pedryc_developer/includes/essay-items.html'
                             with
                             title=essay_item.title
-                            description=essay_item.description %}
+                            description=essay_item.description 
+                            slug=essay_item.slug
+                            %}
 
                         {% endfor %}
                     {% else %}

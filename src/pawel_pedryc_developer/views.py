@@ -3,6 +3,10 @@ from django.shortcuts import render
 
 from .models import EssayCls
 
+# Needed for display log with the error exeption function:
+# https://realpython.com/the-most-diabolical-python-antipattern/
+import logging
+
 # Create your views here.
 
 
@@ -20,16 +24,23 @@ def home_view_pawel(request):
 
 
 def my_essays(request, home_view_pawel_slug):
-    print("print('home_view_pawel_slug'):", home_view_pawel_slug)
-    selected_essay = {
-        'title':       'A first essay is this',
-        'description': 'this is description'
-        }
+    # print("print('home_view_pawel_slug'):", home_view_pawel_slug)
 
-    return render(
+    try:
+        selected_essay = EssayCls.objects.get(slug=home_view_pawel_slug)
+        return render(
         request,
-        'pawel_pedryc_developer/learning-programming-is-a-long-run-not-a-sprint.html',
+        'pawel_pedryc_developer/learning-programming-is-a-long-run-not-a-sprint.html', 
         {
-        'essay_title': selected_essay['title'],
-        'essay_description': selected_essay['description']
+            'essay_found': True,
+            'essay_title': selected_essay.title,
+            'essay_description': selected_essay.description
         })
+    except Exception as exc:
+        return render(
+            request,
+            'pawel_pedryc_developer/learning-programming-is-a-long-run-not-a-sprint.html', 
+            {
+                'essay_found': False
+            }
+            )

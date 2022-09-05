@@ -13,6 +13,9 @@
 
 
 {% block body %}
+
+{% if essay_found %}
+
 <article>
     <img src="" alt="">
 
@@ -33,4 +36,9 @@
         FORM
     </section>
 </article>
+
+{% else %}
+<h2>No essay found for this slug, sorry! </h2>
+{% endif %}
+
 {% endblock%}
