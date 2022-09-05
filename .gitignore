@@ -16,7 +16,7 @@ media
 settings.py
 
 # Django Template base files #
-/pawel_pedryc_developer/base/
+base.html
 
 # Backup files # 
 *.bak 
