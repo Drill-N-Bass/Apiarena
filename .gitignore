@@ -15,6 +15,9 @@ db.sqlite3
 media
 settings.py
 
+# Django Template base files #
+base.html
+
 # Backup files # 
 *.bak 
 
