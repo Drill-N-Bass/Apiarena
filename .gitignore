@@ -5,7 +5,6 @@ env
 .pytest_cache
 .coverage
 
-
 # Django #
 *.log
 *.pot
