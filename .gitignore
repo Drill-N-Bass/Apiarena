@@ -14,9 +14,6 @@ db.sqlite3
 media
 settings.py
 
-# Django Template base files #
-
-
 # Backup files # 
 *.bak 
 
@@ -146,3 +143,6 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# Django Template base files #
+src/pawel_pedryc_developer/templates/pawel_pedryc_developer/base/base.html
