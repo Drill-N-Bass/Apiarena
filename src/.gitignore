@@ -5,6 +5,7 @@ env
 .pytest_cache
 .coverage
 
+
 # Django #
 *.log
 *.pot
@@ -13,9 +14,6 @@ __pycache__
 db.sqlite3
 media
 settings.py
-
-# Django Template base files #
-
 
 # Backup files # 
 *.bak 
@@ -146,3 +144,6 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# hiding base templates #
+pawel_pedryc_developer\templates\pawel_pedryc_developer\base\base.html
