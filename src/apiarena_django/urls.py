@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.dom.minidom import Document
 from django.contrib import admin
 from django.urls import path, include
 
@@ -26,6 +27,14 @@ from products.views import product_detail_view, product_create_view
 
     # 'django.contrib.staticfiles.storage.StaticFilesStorage', # to nie działa a jest prawdopodobnie potrzebne do js by dziłało toggle scroll
 
+###
+# import static so Django can handle uploaded files and images: 
+from django.conf.urls.static import static
+# acces to settings objects like `MEDIA_ROOT`, `MEDIA_URL`:
+from django.conf import settings
+###
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
@@ -35,7 +44,7 @@ urlpatterns = [
     path('create/', product_create_view),
     path('', include('hangman_game.urls')),
     path('', include('pawel_pedryc_developer.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # at this point it doesn't work:
 urlpatterns += staticfiles_urlpatterns() # for pictures 
