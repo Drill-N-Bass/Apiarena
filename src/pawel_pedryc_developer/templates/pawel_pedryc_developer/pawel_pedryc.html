@@ -27,11 +27,13 @@ tu może dam jakiś cytat
                             # django template tag on multiple line (Zach Snow answer):
                             # https://stackoverflow.com/questions/49110044/django-template-tag-on-multiple-line
                             {% endcomment %}
-                            {% include 'pawel_pedryc_developer/includes/essay-items.html'
+                            {% include 'pawel_pedryc_developer/includes/essay_items.html'
                             with
                             title=essay_item.title
                             description=essay_item.description 
                             slug=essay_item.slug
+                            image=essay_item.image.url
+                            essay_prog_language=essay_item.prog_language
                             %}
 
                         {% endfor %}

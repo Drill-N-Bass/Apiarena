@@ -9,3 +9,8 @@ class EssayCls(models.Model):
     slug  = models.SlugField(unique=True) 
     description = models.TextField()
     image = models.ImageField(upload_to='images')
+    language = models.CharField(max_length=200)
+
+    ## Tweak title of the objects in admin page:
+    # def __str__(self):
+    #     return f'{self.title} - {self.slug}'

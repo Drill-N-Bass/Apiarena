@@ -34,7 +34,8 @@ def my_essays(request, home_view_pawel_slug):
         {
             'essay_found': True,
             'essay_title': selected_essay.title,
-            'essay_description': selected_essay.description
+            'essay_description': selected_essay.description,
+            'essay_prog_language': selected_essay.language
         })
     except Exception as exc:
         return render(
