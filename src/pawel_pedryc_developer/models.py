@@ -1,5 +1,7 @@
 from dataclasses import field
 from distutils.command import upload
+from faulthandler import disable
+from tkinter import DISABLED
 from django.db import models
 
 # Create your models here.
@@ -19,6 +21,8 @@ class SendMeMessage(models.Model):
 
 class EssayCls(models.Model):
     title = models.CharField(max_length=200)
+    organizer_email = models.EmailField(null=True)
+    date = models.DateField(null=True)
     slug  = models.SlugField(unique=True) 
     description = models.TextField()
     image = models.ImageField(upload_to='images')

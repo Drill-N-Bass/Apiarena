@@ -1,14 +1,14 @@
 {% extends 'pawel_pedryc_developer/base/base.html' %}
 {% load static %}
 
-{% block title %}{{ essay_title }}{% endblock %}
+{% block title %}{{ essay_all.title }}{% endblock %}
 
 {% block site_css %}
 <link rel="stylesheet" href="{% static 'pawel_pedryc/styles/meetup-detail.css' %}">
 {% endblock %}
 
 {% block main_heading%}
-{{ essay_title }}
+{{ essay_all.title }}
 {% endblock%}
 
 
@@ -17,16 +17,16 @@
 {% if essay_found %}
 
 <article>
-    <img src="" alt="">
+    <img src="{{ essay_all.image.url }}" alt="{{ essay_all.title }}">
 
     <section id="location">
         <h2>Other infos</h2>
-        <address>This essay was made in <span>LOCATION</span> (ADDRESS).</address>
+        <p>This essay is related to <span>{{ essay_all.language.prog_lang_category }} {{ essay_all.language.prog_lang_name }}</span>.</span>
     </section>
 
     <section id="details">
         <h2>What's this essay about?</h2>
-        <p>{{ essay_description }}</p>
+        <p>{{ essay_all.description }}</p>
         <footer>
             <p>Need more details? <a href="">Please contact me</a> (but don't spam ;))</p>
         </footer>

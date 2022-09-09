@@ -33,9 +33,7 @@ def my_essays(request, home_view_pawel_slug):
         'pawel_pedryc_developer/learning-programming-is-a-long-run-not-a-sprint.html', 
         {
             'essay_found': True,
-            'essay_title': selected_essay.title,
-            'essay_description': selected_essay.description,
-            'essay_prog_language': selected_essay.language
+            'essay_all': selected_essay
         })
     except Exception as exc:
         return render(
@@ -45,3 +43,8 @@ def my_essays(request, home_view_pawel_slug):
                 'essay_found': False
             }
             )
+
+
+            # 'essay_title': selected_essay.title,
+            # 'essay_description': selected_essay.description,
+            # 'essay_prog_language': selected_essay.language
