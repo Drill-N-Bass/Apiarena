@@ -44,7 +44,7 @@ urlpatterns = [
     path('create/', product_create_view),
     path('', include('hangman_game.urls')),
     path('', include('pawel_pedryc_developer.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for pictures and files
 
 # at this point it doesn't work:
 urlpatterns += staticfiles_urlpatterns() # for pictures 
