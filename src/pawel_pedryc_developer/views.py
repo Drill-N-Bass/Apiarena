@@ -40,7 +40,7 @@ def my_essays(request, home_view_pawel_slug):
                 send_me_message, was_created = SendMeMessage.objects.get_or_create(email=user_email) # 3.44.00
                 # send_me_message = user_feedback.save() # 3.41.00
                 selected_essay.guest.add(send_me_message) # 3.26.00
-                return redirect('confirm-registration')
+                return redirect('confirm-registration', home_view_pawel_slug=home_view_pawel_slug) # 3.52.00
                 
         return render(
             request,
@@ -64,5 +64,12 @@ def my_essays(request, home_view_pawel_slug):
             # 'essay_prog_language': selected_essay.language
 
 
-def confirm_registration(request):
-    return render(request, 'pawel_pedryc_developer/registration-success.html')
+def confirm_registration(request, home_view_pawel_slug):
+    contact = EssayCls.objects.get(slug=home_view_pawel_slug)
+    # return render(request, 'pawel_pedryc_developer/registration-success.html')
+    return render(
+        request,
+        'pawel_pedryc_developer/registration-success.html',
+    {
+        'organizer_email': contact.organizer_email
+    })
