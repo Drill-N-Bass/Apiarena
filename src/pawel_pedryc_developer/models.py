@@ -1,7 +1,7 @@
 from dataclasses import field
 from distutils.command import upload
-from faulthandler import disable
-from tkinter import DISABLED
+# from faulthandler import disable
+# from tkinter import DISABLED
 from django.db import models
 
 # Create your models here.
