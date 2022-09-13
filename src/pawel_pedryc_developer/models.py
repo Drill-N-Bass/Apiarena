@@ -25,6 +25,7 @@ class EssayCls(models.Model):
     date = models.DateField(null=True)
     slug  = models.SlugField(unique=True) 
     description = models.TextField()
+    details = models.TextField()
     image = models.ImageField(upload_to='images')
     # language = models.CharField(max_length=200)
     language = models.ForeignKey(ProgLang, null=True, on_delete=models.SET_NULL)

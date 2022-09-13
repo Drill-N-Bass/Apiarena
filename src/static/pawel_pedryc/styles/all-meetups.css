@@ -17,6 +17,15 @@ ol {
   border-radius: 4px;
 }
 
+.meetup-small-box {
+  margin: 1rem 0;
+  background-color: #8951f0;
+  padding: 0.3rem; 
+  border-radius: 30px;
+  float: left;
+  color: white;
+}
+
 .meetup-summary {
   display: flex;
   align-items: flex-start;

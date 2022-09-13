@@ -27,7 +27,7 @@
     <section id="details">
         <h2>What's this essay about?</h2>
         {% autoescape off %}
-        <p>{{ essay_all.description }}</p>
+        <p>{{ essay_all.details }}</p>
         {% endautoescape %}
         <footer>
             <p>Need more details? <a href="mailto:{{ essay_all.organizer_email }}">Please contact me</a> (but don't spam ;))</p>
