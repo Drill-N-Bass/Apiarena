@@ -4,6 +4,8 @@
 # *.jsx   eol=lf
 # *.json  eol=lf
 
+# https://stackoverflow.com/questions/54946235/changing-repository-language-on-github
+*.PowerShell linguist-language=django
 *.css linguist-detectable=false
 *.pandas linguist-detectable=false
 *.java linguist-detectable=false
@@ -11,4 +13,4 @@
 *.js linguist-detectable=false
 *.html linguist-detectable=false
 *.xml linguist-detectable=false
-*.django linguist-detectable=True
+*.django linguist-detectable=false
