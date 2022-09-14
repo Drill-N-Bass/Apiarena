@@ -45,4 +45,4 @@ urlpatterns = [
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for pictures and files
 
 # at this point it doesn't work:
-urlpatterns += staticfiles_urlpatterns() # for pictures 
+# urlpatterns += staticfiles_urlpatterns() # for pictures 
