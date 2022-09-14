@@ -5,7 +5,10 @@
 # *.json  eol=lf
 
 # https://stackoverflow.com/questions/54946235/changing-repository-language-on-github
-*.PowerShell linguist-language=django
+# https://stackoverflow.com/questions/34713765/github-changes-repository-to-the-wrong-language
+* linguist-vendored
+*.PowerShell linguist-vendored=false
+
 *.css linguist-detectable=false
 *.pandas linguist-detectable=false
 *.java linguist-detectable=false
