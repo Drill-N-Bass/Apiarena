@@ -13,18 +13,27 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.dom.minidom import Document
 from django.contrib import admin
 from django.urls import path, include
 
 from pages.views import home_view, contact
-from hangman_game.views import easter_egg_hangman_game
+
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from pawel_pedryc_developer.views import home_view_pawel # for pictures
+
 
 from products.views import product_detail_view, product_create_view
 
     # 'django.contrib.staticfiles.storage.StaticFilesStorage', # to nie działa a jest prawdopodobnie potrzebne do js by dziłało toggle scroll
+
+###
+# import static so Django can handle uploaded files and images: 
+from django.conf.urls.static import static
+# acces to settings objects like `MEDIA_ROOT`, `MEDIA_URL`:
+from django.conf import settings
+###
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,10 +41,8 @@ urlpatterns = [
     path('home/', home_view, name='home'),
     path('contact/', contact, name='contact'),
     path('product/', product_detail_view), # , name='product'
-    path('create/', product_create_view),
-    path('', include('hangman_game.urls')),
-    path('', include('pawel_pedryc_developer.urls')),
-]
+    path('create/', product_create_view)]
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for pictures and files
 
 # at this point it doesn't work:
 urlpatterns += staticfiles_urlpatterns() # for pictures 

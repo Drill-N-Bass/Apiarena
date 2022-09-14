@@ -10,3 +10,4 @@ The page will contain the following content:
 - company logo
 - pictures of the products the company sells
 - a form for sending inquiries about the availability of goods.
+

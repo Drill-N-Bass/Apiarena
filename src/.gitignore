@@ -5,6 +5,7 @@ env
 .pytest_cache
 .coverage
 
+
 # Django #
 *.log
 *.pot
@@ -144,5 +145,5 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-# Django Template base files #
-src/pawel_pedryc_developer/templates/pawel_pedryc_developer/base/base.html
+# hiding base templates #
+pawel_pedryc_developer\templates\pawel_pedryc_developer\base\base.html
