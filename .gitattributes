@@ -1,3 +1,9 @@
+# https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld
+* text=auto
+# *.js    eol=lf
+# *.jsx   eol=lf
+# *.json  eol=lf
+
 *.css linguist-detectable=false
 *.pandas linguist-detectable=false
 *.java linguist-detectable=false
@@ -5,4 +11,4 @@
 *.js linguist-detectable=false
 *.html linguist-detectable=false
 *.xml linguist-detectable=false
-*.django linguist-detectable=true
+*.django linguist-detectable=True
