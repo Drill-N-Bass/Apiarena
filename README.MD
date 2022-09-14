@@ -26,6 +26,7 @@ For this, I changed link from `../` to `https: //`
 
 
 **The Git related info:**
+
 Since the creation of my website took a long time - which was related to deepening my knowledge of JS, Django, and creating a website for Apiarena - commits for early versions of 'my-personal-page' repository are fragmented in several repositories.
 **The skeleton of an early version of my Django website is located as a project branch with the `Apiarena` repo.**
 
