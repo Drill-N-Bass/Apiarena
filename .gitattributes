@@ -8,6 +8,7 @@
 # https://stackoverflow.com/questions/34713765/github-changes-repository-to-the-wrong-language
 * linguist-vendored
 *.PowerShell linguist-vendored=false
+*.Other linguist-vendored=false
 
 *.css linguist-detectable=false
 *.pandas linguist-detectable=false
