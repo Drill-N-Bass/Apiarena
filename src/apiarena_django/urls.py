@@ -60,4 +60,5 @@ Tutorial: https://www.youtube.com/watch?v=qWLk9S6mvAY
 
 if settings.DEBUG:
     import debug_toolbar
+    
     urlpatterns += path('__debug__/', include(debug_toolbar.urls)),
